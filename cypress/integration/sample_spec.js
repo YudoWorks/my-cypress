@@ -12,4 +12,10 @@ describe("My First Test", () => {
 
     cy.contains("type");
   });
+
+  it("click the link type", () => {
+    cy.visit("https://example.cypress.io");
+
+    cy.contains("type").click();
+  });
 });
