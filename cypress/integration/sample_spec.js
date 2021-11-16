@@ -18,4 +18,12 @@ describe("My First Test", () => {
 
     cy.contains("type").click();
   });
+
+  it('click "type" navigate to a new url', () => {
+    cy.visit("https://example.cypress.io");
+
+    cy.contains("type").click();
+
+    cy.url().should("include", "/commands/actions");
+  });
 });
